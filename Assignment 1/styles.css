@@ -41,16 +41,3 @@ button:hover{
     transform: translateY(-2px);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
-
-#anim{
-    position: absolute;
-    font-size: 40px;
-    font-family: 'Monserrat', sans-serif;
-    font-weight: bold;
-    color: #f2f3f4;
-    text-shadow: 2px 2px #000000;
-    white-space: nowrap;
-    transition: all 0.2s ease-out;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.5), 0 0 75px rgba(255, 255, 255, 0.5), 0 0 100px rgba(255, 255, 255, 0.5);
-    z-index: -1;
-}

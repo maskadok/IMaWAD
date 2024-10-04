@@ -1,0 +1,36 @@
+body{
+    font-family: Montserrat, sans-serif;
+    color: black;
+    background-color: #f5f5f5;
+    margin: 0vw 20vw;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+li{
+    margin-bottom: 1vh;
+}
+
+.carousel-item img{
+    width: 300px;
+}
+
+/* for arrow buttons to be black */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    filter: invert(1);
+}
+
+@media (max-width: 1000px){
+    body{
+        margin: 2vw;
+    }
+}

@@ -1,0 +1,43 @@
+body{
+    color: #F5F5F5;
+    background-color: #708090;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 5vw;
+    margin-right: 20vw;
+}
+
+img{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    height: 350px;
+    border-radius: 20px;
+}
+
+.images-container{
+    display: flex;
+    gap: 20px;
+}
+
+table, th, td{
+    border: 2px solid #F5F5F5;
+    padding: 1vh;
+    border-collapse: collapse;
+    
+}
+
+button{	
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f3f4;
+    color: #708090;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 3px;
+    border-radius: 14px;
+    border: none;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">SpecialPayMail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e6d0f4eb4c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="images/logo.png" alt="Логотип SpecialPayMail" class="me-2" style="width: 120px;">
+                <h1 id="welcome-text" class="h4 mb-0">Welcome to SpecialPayMail</h1>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="language-toggle" data-bs-toggle="dropdown" aria-expanded="false">Choose Language</button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-toggle">
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('ru')">Русский</a></li>
+                    </ul>
+                </div>
+                <a href="profile.html">
+                    <img src="images/profile-icon.png" alt="User Profile" class="rounded-circle" style="width: 60px; border: 2px solid #26EEB0;">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-3">
+        <section class="text-center mb-4">
+            <h2 id="main-title" class="text-primary">Want to personally connect with your favorite celebrities?</h2>
+            <p id="main-description" class="lead">Now it's possible with our new app!</p>
+        </section>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 rounded shadow">
+                    <h4 id="feature-title-1">Choose your celebrity</h4>
+                    <p id="feature-desc-1">The app features thousands of stars and organizations worldwide. Find your idol or dream company!</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 rounded shadow">
+                    <h4 id="feature-title-2">Send a message</h4>
+                    <p id="feature-desc-2">Write your question or just express your feelings.</p>
+                    <a href="https://t.me/awdwasd" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-phone"></i>
+                        <span id="contact-us-text" class="fs-5">Contact us</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 rounded shadow">
+                    <h4 id="feature-title-3">Get a personal reply</h4>
+                    <p id="feature-desc-3">The celebrity will personally reply to your message, with a money-back guarantee!</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 rounded shadow">
+                    <h4 id="feature-title-4">Payment</h4>
+                    <p id="feature-desc-4">The cost of a message starts at $1. You can send a message to the selected celebrity.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 rounded shadow">
+                    <h4 id="feature-title-5">Cancel and refund</h4>
+                    <p id="feature-desc-5">Users are entitled to a refund within 30 days if the message has not been delivered.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 rounded shadow">
+                    <h4 id="feature-title-6">More convenient in the app</h4>
+                    <p id="feature-desc-6">Join us in creating services used by millions worldwide.</p>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="https://apps.apple.com/kz/app/special/id6504431870" target="_blank" class="btn btn-secondary me-2 d-flex align-items-center">
+                            <i class="fa-brands fa-apple"></i>
+                            <span id="download-appstore-text" class="fs-5">Download on AppStore</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/114FgTDrQbp6eHY42ljUHdm5G82mxuxu1/view" target="_blank" class="btn btn-secondary d-flex align-items-center">
+                            <i class="fa-brands fa-google-play"></i>
+                            <span id="download-playstore-text" class="fs-5">Download on PlayMarket</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <h2 id="celebrities-title" class="text-center text-primary mb-6">Our Celebrities <i class="fa-solid fa-star"></i></h2>
+            <div class="col-md-6 offset-md-3 mb-3">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="search-input" class="form-control" placeholder="Search for a celebrity...">
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="celebrity-list">
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Aaron Paul" onclick="navigateToProfile('aaron');" style="cursor: pointer;">
+                        <img src="celebs/aaron.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Aaron" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Aaron Paul</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Buster" onclick="navigateToProfile('buster');" style="cursor: pointer;">
+                        <img src="celebs/buster.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Buster" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Buster</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Anne Hathaway" onclick="navigateToProfile('anne');" style="cursor: pointer;">
+                        <img src="celebs/anne.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Anne Hathaway" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Anne Hathaway</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Neil deGrasse Tyson" onclick="navigateToProfile('neil');" style="cursor: pointer;">
+                        <img src="celebs/neil.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Neil deGrasse Tyson" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Neil deGrasse Tyson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Jake Gyllenhaal" onclick="navigateToProfile('jake');" style="cursor: pointer;">
+                        <img src="celebs/jake.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Jake Gyllenhaal" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Jake Gyllenhaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Elon Musk" onclick="navigateToProfile('elon');" style="cursor: pointer;">
+                        <img src="celebs/elon.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Elon Musk" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Elon Musk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Assel Sagatova" onclick="navigateToProfile('assel');" style="cursor: pointer;">
+                        <img src="celebs/assel.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Assel Sagatova" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Assel Sagatova</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Nurlan Saburov" onclick="navigateToProfile('nurlan');" style="cursor: pointer;">
+                        <img src="celebs/nurlan.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Nurlan Saburov" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Nurlan Saburov</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Dimash Kudaibergenov" onclick="navigateToProfile('dimash');" style="cursor: pointer;">
+                        <img src="celebs/dimash.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Dimash Kudaibergenov" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Dimash Kudaibergenov</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Cristiano Ronaldo" onclick="navigateToProfile('ronaldo');" style="cursor: pointer;">
+                        <img src="celebs/ronaldo.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Cristiano Ronaldo" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Cristiano Ronaldo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Keira Knightley" onclick="navigateToProfile('keira');" style="cursor: pointer;">
+                        <img src="celebs/keira.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Keira Knightley" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Keira Knightley</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center" data-name="Lionel Messi" onclick="navigateToProfile('messi');" style="cursor: pointer;">
+                        <img src="celebs/messi.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Lionel Messi" style="width: 120px; height: 120px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Lionel Messi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-text" class="bg-primary text-white text-center py-3">
+        &copy; 2024 SpecialPayMail. All rights reserved.
+    </footer>
+    <script src="index.js"></script> 
+</body>
+</html>
